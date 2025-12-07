@@ -18,7 +18,11 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json()); 
 app.use(bodyParser.json())
 app.use(cors({
-    origin: "*", // or your frontend URL
+    origin: [
+        "http://localhost:5173",              // React local
+        // "https://your-frontend-name.vercel.app", // Deployed frontend
+        "http://localhost:3000"               // optional (Next.js etc)
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
