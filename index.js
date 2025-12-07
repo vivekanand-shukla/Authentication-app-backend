@@ -20,7 +20,7 @@ app.use(bodyParser.json())
 app.use(cors({
     origin: [
         "http://localhost:5173",              // React local
-        // "https://your-frontend-name.vercel.app", // Deployed frontend
+         "https://authentication-app-frontned.vercel.app", // Deployed frontend
         "http://localhost:3000"               // optional (Next.js etc)
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
